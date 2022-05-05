@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <title>docs</title>
+<style>
+    body{
+        background-color: rgb(158, 158, 158);
+    }
+    section{
+        margin-top: 90px;
+        position: relative;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .logindiv{
+      display: flex;
+      width: 450px;
+      gap: 20px;
+      border: 2px solid white;
+      padding: 25px;
+      padding-right: 0;
+      background-color: white;
+      color: white;
+      font-size: 17px;
+      border-radius: 5px;
+    }
+    .loginform{
+      width: 250px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      gap: 3px;
+      background-color:gray;
+      border-radius: 10px;
+      padding: 35px;
+    }
+    .signupdiv{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+      gap: 20px;
+      width: 450px;
+      border: 2px solid white;
+      padding: 25px;
+      background-color: white;
+      color: white;
+      font-size: 17px;
+      border-radius: 5px;
+    }
+    .signupform{
+      display: grid;
+      width: 400px;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+      background-color:gray;
+      border-radius: 10px;
+      padding: 35px;
+    }
+    .input{
+      border: none ;
+      border-bottom: 3px solid white;
+      cursor:pointer;
+      cursor:blue;
+      z-index: 2;
+      background-color: gray;
+    }
+    .Sinput{
+      width: 300px;
+      border: none ;
+      border-bottom: 3px solid white;
+      cursor:pointer;
+      cursor:blue;
+      z-index: 2;
+      background-color: gray;
+    }
+
+    .lay{
+      width: 200px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      color: gray;
+      font-size: 25px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .Ssubmit,.submit{
+      margin-top: 20px;
+      background-color:white ;
+      color:rgb(85, 85, 85);
+      border: none;
+      border-radius: 10px;
+      transform: scale(100%);
+      transition: all 0.5s;
+    }
+    .Ssubmit:hover,.submit:hover{
+      color: rgb(88, 88, 88);
+      background-color: rgb(212, 209, 209);
+      transform: scale(90%);
+    }
+    #btn{
+        position:absolute;
+        color: white;
+        right:0;
+        text-align: center;
+        padding: 0%;
+    }
+    .btn{
+        position:absolute;
+        color: white;
+        right:8px;
+        text-align: center;
+        padding: 0%;
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{url_for('home')}}">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('login')}}">Login<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('signup')}}">SignUp</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        {% block login %}{%endblock %} {% block signup %}{%endblock %} {% block users %}{%endblock %}
+      </section>
+        
+</body>
+</html>

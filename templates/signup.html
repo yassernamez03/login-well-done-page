@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block signup %}
+<div class="signupdiv">
+    <form action="signup" method="post" class="signupform">
+        {{form.hidden_tag()}} 
+        {{form.name.label()}} 
+        {{form.name(class='Sinput')}} 
+        {{form.email.label()}} 
+        {{form.email(class='Sinput')}}  
+        {{form.password.label()}} 
+        {{form.password(class='Sinput')}} 
+        {{form.conferm.label()}} 
+        {{form.conferm(class='Sinput')}} 
+        {{form.submit(class='Ssubmit')}}
+    </form>
+</div>
+
+{% endblock %}

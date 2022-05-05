@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block login %}
+<div class="logindiv">
+    <form action="login" method="post" class="loginform">
+    {{ form.hidden_tag()}} 
+    {{ form.name.label()}} 
+    {{ form.name(class='input') }} 
+    {{form.password.label()}} 
+    {{form.password(class='input')}}
+    {{ form.submit(class='submit')}}
+    </form>
+    <div class="lay"> 
+        <span>Welcome please login</span>
+    </div>
+</div>
+
+ {%endblock %}
